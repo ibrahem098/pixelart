@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+}
+
+.pixel {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(244, 244, 244);
+    display: inline-block;
+    margin: -1px;
+}
+
+.container {
+    position: absolute;
+    top: 10%;
+}
+
+.color {
+    /* width: 30px;
+    height: 30px; */
+    border: 1px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+.window {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.window-body-heading {
+    color: black;
+    font-weight: bold;
+}
+
+.window img {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+}
