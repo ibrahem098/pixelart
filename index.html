@@ -9,67 +9,99 @@
     <title>pixelart</title>
 </head>
 <body>
+    <div class="page">
     <div class="title-bar">
         <div class="title-bar-text">Pixel Art</div>
         <div class="title-bar-controls">
         <button class="Help" aria-label="Help"></button>
-        <button aria-label="Close"></button>
+        <button class="clear" aria-label="Close"></button>
         </div>
     </div>
 
-    <div class="window hidden" style="width: 300px">
-        <div class="title-bar">
-        <div class="title-bar-text">info</div>
-        <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-        </div>
-        </div>
-        <div class="window-body">
-            <img src="https://win98icons.alexmeub.com/icons/png/accessibility_window_objs.png" alt="">
-            <br>
-            <p class="window-body-heading">pixelArt project by <a href="https://github.com/ibrahem098">ibrahim ismail</a></p>
-            <br>
-            <p class="window-body-heading">98.css by <a href="https://github.com/jdan">Jordan Scales</a></p>
+<div class="bottomBar">
+    <div class="colorBox">    
+        <div class="colors">
+        <button class="color rgb(0,0,0)"></button>
+        <button class="color rgb(123,123,123)"></button>
+        <button class="color rgb(120,1,0)"></button>
+        <button class="color rgb(122,122,1)"></button>
+        <button class="color rgb(2,123,1)"></button>
+        <button class="color rgb(1,121,121)"></button>
+        <button class="color rgb(0,0,122)"></button>
+        <button class="color rgb(121,1,122)"></button>
+        <button class="color rgb(124,124,56)"></button>
+        <button class="color rgb(1,57,57)"></button>
+        <button class="color rgb(0,124,254)"></button>
+        <button class="color rgb(0,56,122)"></button>
+        <button class="color rgb(56,1,255)"></button>
+        <button class="color rgb(123,56,1)"></button><br>
+        <button class="color rgb(255,255,255)"></button>
+        <button class="color rgb(189,189,189)"></button>
+        <button class="color rgb(255,0,0)"></button>
+        <button class="color rgb(254,254,0)"></button>
+        <button class="color rgb(7,254,1)"></button>
+        <button class="color rgb(1,255,255)"></button>
+        <button class="color rgb(1,1,253)"></button>
+        <button class="color rgb(255,0,255)"></button>
+        <button class="color rgb(255,255,124)"></button>
+        <button class="color rgb(1,255,123)"></button>
+        <button class="color rgb(124,254,253)"></button>
+        <button class="color rgb(123,124,255)"></button>
+        <button class="color rgb(255,0,122)"></button>
+        <button class="color rgb(253,122,55)"></button>
         </div>
     </div>
-    </div>
+    <div class="status-bar">
+        <button class="color rgb(0,0,0) selected"></button>
 
-    <div class="container"></div>
-    <div class="colors">
-    <button class="color rgb(0,0,0)"></button>
-    <button class="color rgb(123,123,123)"></button>
-    <button class="color rgb(120,1,0)"></button>
-    <button class="color rgb(122,122,1)"></button>
-    <button class="color rgb(2,123,1)"></button>
-    <button class="color rgb(1,121,121)"></button>
-    <button class="color rgb(0,0,122)"></button>
-    <button class="color rgb(121,1,122)"></button>
-    <button class="color rgb(124,124,56)"></button>
-    <button class="color rgb(1,57,57)"></button>
-    <button class="color rgb(0,124,254)"></button>
-    <button class="color rgb(0,56,122)"></button>
-    <button class="color rgb(56,1,255)"></button>
-    <button class="color rgb(123,56,1)"></button><br>
-    <button class="color rgb(255,255,255)"></button>
-    <button class="color rgb(189,189,189)"></button>
-    <button class="color rgb(255,0,0)"></button>
-    <button class="color rgb(254,254,0)"></button>
-    <button class="color rgb(7,254,1)"></button>
-    <button class="color rgb(1,255,255)"></button>
-    <button class="color rgb(1,1,253)"></button>
-    <button class="color rgb(255,0,255)"></button>
-    <button class="color rgb(255,255,124)"></button>
-    <button class="color rgb(1,255,123)"></button>
-    <button class="color rgb(124,254,253)"></button>
-    <button class="color rgb(123,124,255)"></button>
-    <button class="color rgb(255,0,122)"></button>
-    <button class="color rgb(253,122,55)"></button>
+        <p class="status-bar-field">Selected Color</p>
+        <p class="status-bar-field updatedPixels">updatedPixels: 0</p>
+
+    </div>
+</div>
+<div class="pixelGrid"></div>
+
+
+
+<div class="window hidden infoWindow" style="width: 300px">
+    <div class="title-bar">
+    <div class="title-bar-text">info</div>
+    <div class="title-bar-controls">
+        <button class="Close" aria-label="Close"></button>
+    </div>
+    </div>
+    <div class="window-body">
+        <img src="https://win98icons.alexmeub.com/icons/png/accessibility_window_objs.png" alt="">
+        <br>
+        <p class="window-body-heading">for the love of MS Paint</p>
+        <br>
+        <p class="window-body-heading">project by <a href="https://github.com/ibrahem098">ibrahim ismail</a></p>
+        <br>
+        <p class="window-body-heading">98.css by <a href="https://github.com/jdan">Jordan Scales</a></p>
+    </div>
+    
 </div>
 
 
-
+</div>
+<div class="window hidden nowWhatWindow" style="width: 300px"></div>
+    <div class="title-bar">
+    <div class="title-bar-text">Seriously?</div>
+    <div class="title-bar-controls">
+        <button class="Close2" aria-label="Close"></button>
+    </div>
+    </div>
+    <div class="window-body">
+        <br>
+        <p class="window-body-heading">now what?</p>
+        <img src="https://win98icons.alexmeub.com/icons/png/chm-2.png" alt="">
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    
+</div>
     <script src="/script.js"></script>
 </body>
 </html>

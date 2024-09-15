@@ -2,6 +2,14 @@
     margin: 0px;
 }
 
+body {
+    overflow: hidden;
+}
+
+.pixelGrid {
+    padding: 16px;
+}
+
 .pixel {
     width: 30px;
     height: 30px;
@@ -11,14 +19,27 @@
 }
 
 .container {
-    position: absolute;
+    position: relative;
     top: 10%;
 }
 
 .color {
-    /* width: 30px;
-    height: 30px; */
-    border: 1px solid black;
+    min-width: 30px;
+    height: 30px;
+}
+
+
+.colorBox {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 2;
+    /* position: absolute; */
+    /* position: fixed; */
+    background-color: rgb(189, 189, 189);
+
 }
 
 .hidden {
@@ -27,8 +48,9 @@
 
 .window {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 40%;
+    z-index: 2;
 }
 
 .window-body-heading {
@@ -38,6 +60,39 @@
 
 .window img {
     position: absolute;
-    top: 50%;
-    left: 85%;
+    top: 40%;
+    left: 83%;
+}
+
+.colorBox {
+    position: absolute;
+    bottom: 0px;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+.status-bar {
+    height: 10px;
+    position: absolute;
+    bottom: 15px;
+    background-color: rgb(189, 189, 189);
+    left: 80%;
+    z-index: 3;
+    right: 0px;
+
+}
+
+.bottomBar {
+    background-color: rgb(189, 189, 189);
+}
+
+.status-bar-field {
+    height: 15px;
+}
+
+.status-bar .selected {
+    height: 10px;
+}
+
+.nowWhatWindow {
+    max-width: 300px;
 }
