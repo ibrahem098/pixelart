@@ -1,13 +1,21 @@
 * {
     margin: 0px;
+    background-color: rgb(189, 189, 189);
 }
 
 body {
     overflow: hidden;
 }
 
+.title-bar-text {
+    background-color: transparent;
+    margin-left: 10px;
+}
+
 .pixelGrid {
     padding: 16px;
+    background-color: #e6e6e6;
+    overflow: scroll;
 }
 
 .pixel {
@@ -18,28 +26,53 @@ body {
     margin: -1px;
 }
 
-.container {
-    position: relative;
-    top: 10%;
-}
-
 .color {
     min-width: 30px;
     height: 30px;
 }
 
-
 .colorBox {
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: left;
     align-items: center;
-    z-index: 2;
-    /* position: absolute; */
-    /* position: fixed; */
     background-color: rgb(189, 189, 189);
+}
 
+.colorBox {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 20px;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+.status-bar {
+    height: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    right: 0px;
+}
+
+.status-bar-field {
+    height: 15px;
+    width: 30px;
+}
+
+.button-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.ctrl {
+    min-width: 10px;
+    padding: 10px;
+}
+
+.selected {
+    height: 60px;
+    width: 60px;
 }
 
 .hidden {
@@ -62,54 +95,4 @@ body {
     position: absolute;
     top: 40%;
     left: 83%;
-}
-
-.colorBox {
-    position: absolute;
-    bottom: 0px;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
-}
-
-.status-bar {
-    height: 10px;
-    position: absolute;
-    bottom: 15px;
-    background-color: rgb(189, 189, 189);
-    left: 80%;
-    z-index: 3;
-    right: 0px;
-
-}
-
-.bottomBar {
-    background-color: rgb(189, 189, 189);
-}
-
-.status-bar-field {
-    height: 15px;
-}
-
-.status-bar .selected {
-    height: 10px;
-}
-
-.nowWhatWindow {
-    max-width: 300px;
-}
-
-.button-icon {
-    width: 25px;
-    height: 25px;
-}
-
-.ctrl {
-    min-width: 10px;
-    width: 50px;
-    padding: 10px;
-}
-
-.ctrlbox {
-    margin-left: 800px;
-    z-index: 4;
-    margin-bottom: 20px;
 }

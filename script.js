@@ -43,7 +43,18 @@ document.querySelectorAll('.pixel').forEach((div) => {
         updatedPixels++
         document.querySelector('.updatedPixels').innerHTML = `<p>updatedPixels: ${updatedPixels}</p>`;
     })
+
 })
+let activCellColor = ``;
+document.querySelectorAll('.pixel').forEach((div) => {
+    div.addEventListener('mouseover', () => {
+        activCellColor = div.style.backgroundColor;
+        upadateActivCellElemnt(activCellColor);
+    })
+})
+
+
+
 document.querySelectorAll('button').forEach((button) => {
     let buttonClolor = button.classList[1]
     button.style.backgroundColor = `${buttonClolor}`;
@@ -58,15 +69,12 @@ document.querySelector('.Help').addEventListener('click', () => {
 document.querySelector('.Close').addEventListener('click', () => {
     infoWindow.classList.add('hidden');
 })
-document.querySelector('.Close2').addEventListener('click', () => {
-    nowWhatWindow.classList.add('hidden');
-})
 
 
 
 document.querySelector('.clear').addEventListener('click', () => {
     nowWhatWindow.classList.remove('hidden');
-    document.querySelector('.page').innerHTML = ''
+    document.querySelector('.page').innerHTML = ``
 })
 
 function fillRandom() {
@@ -101,3 +109,35 @@ function bucket(selectedColor) {
 document.querySelector('.bucket').addEventListener('click', () => {
     bucket(selectedColor);
 })
+
+function upadateActivCellElemnt(activCellColor) {
+    let activeRgb = document.querySelector('.activeRgb');
+    activeRgb.innerHTML = `${activCellColor}`;
+}
+
+document.querySelectorAll('.ctrl').forEach((div) => {
+    div.addEventListener('mouseover', () => {
+        activCellColor = div.classList[2];
+        upadateActivCellElemnt(activCellColor);
+    })
+})
+// let red2 = 0;
+// let green2 = 0;
+// let blue2 = 0;
+
+// document.querySelectorAll('.pixel').forEach((pixel) => {
+//     if (green2 < 255) {
+//         green2++;
+//     } else {
+//         green2 = 0
+//     }
+
+//     if (red2 === 255 && green2 === 255 && blue2 === 255) {
+//         red2 = 0;
+//         green2 = 0;
+//         blue2 = 0;
+//     }
+
+//     let updatingColor = `rgb(${red2},${green2},${blue2})`;
+//     pixel.style.backgroundColor = updatingColor;
+// });

@@ -19,7 +19,9 @@
     </div>
 
 <div class="bottomBar">
-    <div class="colorBox">    
+    <div class="colorBox">
+        <button class="color rgb(0,0,0) selected"></button>
+
         <div class="colors">
         <button class="color rgb(0,0,0)"></button>
         <button class="color rgb(123,123,123)"></button>
@@ -51,20 +53,14 @@
         <button class="color rgb(253,122,55)"></button>
         </div>
         <div class="ctrlbox">
-            <button class="ctrl random"><img class="button-icon "src="https://win98icons.alexmeub.com/icons/png/file_blue_grad_paint-0.png" alt="generate random pixels"></button>
-            <button class="ctrl wipe" ><img class="button-icon "src="https://win98icons.alexmeub.com/icons/png/clean_drive-0.png" alt="generate random pixels"></button>
-            <button class="ctrl bucket" ><img class="button-icon "src="https://win98icons.alexmeub.com/icons/png/display_properties-3.png" alt="generate random pixels"></button>
+            <button class="ctrl random generate-random-rgb-grid"><img class="button-icon "src="https://win98icons.alexmeub.com/icons/png/file_blue_grad_paint-0.png" alt="generate random pixels"></button>
+            <button class="ctrl wipe wipe-grid" ><img class="button-icon "src="https://win98icons.alexmeub.com/icons/png/clean_drive-0.png" alt="generate random pixels"></button>
+            <button class="ctrl bucket select-background-color" ><img class="button-icon "src="https://win98icons.alexmeub.com/icons/png/display_properties-3.png" alt="generate random pixels"></button>
         </div>
     </div>
-
-    
-
     <div class="status-bar">
-        <button class="color rgb(0,0,0) selected"></button>
-
-        <p class="status-bar-field">Selected Color</p>
-        <p class="status-bar-field updatedPixels">updatedPixels: 0</p>
-
+        <p class="status-bar-field updatedPixels">updated pixels: 0</p>
+        <p class="status-bar-field activeRgb"></p>
     </div>
 </div>
 <div class="pixelGrid"></div>
@@ -85,28 +81,24 @@
         <br>
         <p class="window-body-heading">98.css by <a href="https://github.com/jdan">Jordan Scales</a></p>
     </div>
-    
+</div>
 </div>
 
-
-</div>
-<div class="window hidden nowWhatWindow" style="width: 300px"></div>
+<div class="window hidden nowWhatWindow" style="width: 300px">
     <div class="title-bar">
     <div class="title-bar-text">Seriously?</div>
     <div class="title-bar-controls">
-        <button class="Close2" aria-label="Close"></button>
     </div>
     </div>
+    
     <div class="window-body">
         <br>
         <p class="window-body-heading">now what?</p>
-        <img src="https://win98icons.alexmeub.com/icons/png/chm-2.png" alt="">
         <br>
-        <br>
-        <br>
-        <br>
+        <p class="window-body-heading">What did you expect?</p>
+        <img src="https://win98icons.alexmeub.com/icons/png/chm-2.png" alt=""> 
+        <br><br><br>
     </div>
-    
 </div>
     <script src="script.js"></script>
 </body>
