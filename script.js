@@ -11,10 +11,11 @@ let tenPixels = `
     <div class="pixel"></div>
     <div class="pixel"></div>
 `;
+let isMono = false;
 
 
-
-for (let i = 0; i < 100; i++) {
+// 1850 pixels in the grid.
+for (let i = 0; i < 185; i++) {
     pixelGrid += tenPixels;
 }
 let updatedPixels = 0
@@ -26,6 +27,12 @@ document.querySelectorAll('.color').forEach((color) => {
         selectedColor = `${color.classList[1]}`;
         selectedColorBox.classList.remove('rgb(0,0,0)');
         selectedColorBox.style.backgroundColor = `${selectedColor}`;
+        if (isMono) {
+            document.querySelectorAll('.pixel').forEach((pixel) => {
+                pixel.style.backgroundColor = `${selectedColor}`;
+            })
+            isMono = false
+        }
     })
 })
 
@@ -60,4 +67,37 @@ document.querySelector('.Close2').addEventListener('click', () => {
 document.querySelector('.clear').addEventListener('click', () => {
     nowWhatWindow.classList.remove('hidden');
     document.querySelector('.page').innerHTML = ''
+})
+
+function fillRandom() {
+    document.querySelectorAll('.pixel').forEach((pixel) => {
+        let red = (Math.random() * 255);
+        let green = (Math.random() * 255);
+        let blue = (Math.random() * 255);
+        pixel.style.backgroundColor = `rgb(${red},${green},${blue})`
+    })
+}
+
+function wipe() {
+    document.querySelectorAll('.pixel').forEach((pixel) => {
+        pixel.style.backgroundColor = `rgb(244, 244, 244)`
+    })
+}
+
+document.querySelector('.random').addEventListener('click', () => {
+    fillRandom()
+})
+document.querySelector('.wipe').addEventListener('click', () => {
+    wipe()
+})
+
+// 
+
+function bucket(selectedColor) {
+    isMono = true;
+};
+
+
+document.querySelector('.bucket').addEventListener('click', () => {
+    bucket(selectedColor);
 })
