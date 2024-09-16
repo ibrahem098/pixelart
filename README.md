@@ -1,7 +1,7 @@
-
 # Pixel Art Application
 
 This is a web-based pixel art drawing tool inspired by the aesthetics of **Windows 98 Paint**. It uses [98.css](https://jdan.github.io/98.css/) by Jordan Scales to provide the nostalgic look of the classic OS, while the rest of the implementation was developed by me.
+![Pixel Art Example](./screencapture.png)
 
 ## Features
 
